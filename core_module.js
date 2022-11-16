@@ -24,19 +24,13 @@ fs.readFile('core_module.txt', (err, data) => {
 console.log('Hello, core module'); */
 
 // ---------- events Module --------------------------------
-const EventEmitter = require('events');
 
-const events = new EventEmitter();
+const School = require('./school');
+
+const school = new School();
 
 // Register a listener for bellRing event
-events.on('bellRing', ({ first, text }) => {
+school.on('bellRing', ({ first, text }) => {
     console.log(`We need to run because ${first} ${text}`);
 });
-
-// rise an event
-setTimeout(() => {
-    events.emit('bellRing', {
-        first: 'second period',
-        text: 'ended',
-    });
-}, 2000);
+school.startPeriod();
