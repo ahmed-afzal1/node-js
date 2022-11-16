@@ -1,0 +1,21 @@
+{
+    "bracket-pair-colorizer-2.colors": [
+
+        "Gold",
+        "Orchid",
+        "LightSkyBlue"
+    ],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+    },
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+    },
+    "eslint.alwaysShowStatus": true
+
+}
+
