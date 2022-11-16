@@ -29,9 +29,14 @@ const EventEmitter = require('events');
 const events = new EventEmitter();
 
 // Register a listener for bellRing event
-events.on('bellRing', () => {
-    console.log('We need to run');
+events.on('bellRing', ({ first, text }) => {
+    console.log(`We need to run because ${first} ${text}`);
 });
 
 // rise an event
-events.emit('bellRing');
+setTimeout(() => {
+    events.emit('bellRing', {
+        first: 'second period',
+        text: 'ended',
+    });
+}, 2000);
