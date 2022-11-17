@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
         res.write('about us');
         res.end();
     } else {
-        res.write('404 not found');
+        res.write('404 noot found');
         res.end();
     }
 });
